@@ -1,0 +1,37 @@
+{
+    "name": "signaturetech/laravel-session-log",
+    "description": "A package to manage and logout your active session on other devices",
+    "type": "library",
+    "keywords": ["sessions", "devices", "browsers"],
+    "require": {
+        "php": ">=8.0",
+        "laravel/framework": ">= 9.0",
+        "jenssegers/agent": "^2.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Signaturetech\\LaravelSessionLog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SignatureTech\\LaravelSessionLog\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prem Chand Saini",
+            "email": "prem@signaturetech.in"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SignatureTech\\LaravelSessionLog\\LaravelSessionLogServiceProvider"
+            ]
+        }
+    }
+}
