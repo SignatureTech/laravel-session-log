@@ -66,21 +66,15 @@ class User extends Authenticatable
 }
 ```
 
-> Please do't forgot to add `Laravel\Sanctum\HasApiTokens` Sanctum default trait to your model
+**Note:** Please do't forgot to add `Laravel\Sanctum\HasApiTokens` Sanctum default trait to your model
 
-To issue a token, you may use the `createLoginToken` method. The `createLoginToken` method returns a `Laravel\Sanctum\NewAccessToken` instance. API tokens are hashed using SHA-256 hashing before being stored in your database, but you may access the plain-text value of the token using the `plainTextToken` property of the `NewAccessToken` instance. You should display this value to the user immediately after the token has been created:
+To issue a token, you may use the `createLoginToken` method:
 
 ```
-use Illuminate\Http\Request;
-
-Route::post('/tokens/create', function (Request $request) {
-    $token = $user->createLoginToken(TokenName);
-
-    return ['token' => $token->plainTextToken];
-});
+$token = $user->createLoginToken('TokenName')->plainTextToken;
 ```
 
-> Please use `createLoginToken` function to generate access token insted of `createToken` of Santum
+**Note:** Please use `createLoginToken` function to generate access token insted of `createToken` of Santum
 
 ### Methods you can use
 
