@@ -53,7 +53,7 @@ trait SessionLog
                 'agent' => [
                     'is_desktop' => $agent->isDesktop(),
                     'is_mobile' => $agent->isMobile(),
-                    'is_tablet' => $agent->isTablet();
+                    'is_tablet' => $agent->isTablet(),
                     'platform' => $agent->platform(),
                     'browser' => $agent->browser(),
                 ],
