@@ -52,6 +52,8 @@ trait SessionLog
                 'id' => $token->id,
                 'agent' => [
                     'is_desktop' => $agent->isDesktop(),
+                    'is_mobile' => $agent->isMobile(),
+                    'is_tablet' => $agent->isTablet();
                     'platform' => $agent->platform(),
                     'browser' => $agent->browser(),
                 ],
